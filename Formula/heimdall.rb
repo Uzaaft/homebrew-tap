@@ -17,6 +17,7 @@ class Heimdall < Formula
 
   service do
     run "#{opt_bin}/heim"
+    environment_variables PATH: std_service_path_env, LANG: "en_US.UTF-8"
     keep_alive true
     process_type :interactive
     log_path "#{var}/log/heimdall/heimdall.out.log"
