@@ -19,5 +19,7 @@ class Heimdall < Formula
     run "#{opt_bin}/heim"
     keep_alive true
     process_type :interactive
+    log_path "#{var}/log/heimdall/heimdall.out.log"
+    error_log_path "#{var}/log/heimdall/heimdall.err.log"
   end
 end
