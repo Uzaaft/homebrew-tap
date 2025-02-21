@@ -11,7 +11,7 @@ class Heimdall < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install",  "--path", "."
+    system "cargo", "install",  "-vv", *std_cargo_args(path: ".")
     bin.install "#{buildpath}/target/release/heim"
   end
 
